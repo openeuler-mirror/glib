@@ -1,11 +1,11 @@
 Name:           glib
 Epoch:          1
 Version:        1.2.10
-Release:        54
+Release:        55
 License:        LGPLv2+
 Summary:        GLib is the core library that forms the basis for projects
 URL:            http://www.gtk.org/
-Source:         ftp://ftp.gimp.org/pub/gtk/v1.2/glib-%{version}.tar.gz
+Source:         https://ftp.gtk.org/pub/gtk/v1.2/glib-1.2.10.tar.gz
 BuildRequires:  coreutils libtool make
 
 Patch0001:      glib-1.2.10-isowarning.patch

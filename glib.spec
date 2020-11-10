@@ -1,12 +1,13 @@
 Name:           glib
 Epoch:          1
 Version:        1.2.10
-Release:        55
+Release:        56
 License:        LGPLv2+
 Summary:        GLib is the core library that forms the basis for projects
 URL:            http://www.gtk.org/
 Source:         https://ftp.gtk.org/pub/gtk/v1.2/glib-1.2.10.tar.gz
 BuildRequires:  coreutils libtool make
+Requires:       %{name}-help = %{epoch}:%{version}-%{release}
 
 Patch0001:      glib-1.2.10-isowarning.patch
 Patch0002:      glib-1.2.10-gcc34.patch
@@ -74,5 +75,8 @@ make check LIBTOOL=%{_bindir}/libtool
 %exclude %{_infodir}
 
 %changelog
+* Mon Nov 09 2020 huanghaitao <huanghaitao8@huawei.com> - 1:1.2.10-56
+- Make help package required by glib
+
 * Wed Nov 27 2019 Ling Yang <lingyang2@huawei.com> - 1:1.2.10-54
 - Package init

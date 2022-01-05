@@ -1,7 +1,7 @@
 Name:           glib
 Epoch:          1
 Version:        1.2.10
-Release:        55
+Release:        56
 License:        LGPLv2+
 Summary:        GLib is the core library that forms the basis for projects
 URL:            http://www.gtk.org/
@@ -41,8 +41,8 @@ Help document for the glib package.
 
 %prep
 %autosetup -n %{name}-%{version} -p1
-install -p -m 0644 /usr/lib/rpm/config.guess config.guess
-install -p -m 0644 /usr/lib/rpm/config.sub config.sub
+install -p -m 0644 /usr/lib/rpm/openEuler/config.guess config.guess
+install -p -m 0644 /usr/lib/rpm/openEuler/config.sub config.sub
 %build
 %configure LIBTOOL=%{_bindir}/libtool
 %make_build LIBTOOL=%{_bindir}/libtool
@@ -74,5 +74,8 @@ make check LIBTOOL=%{_bindir}/libtool
 %exclude %{_infodir}
 
 %changelog
+* Wed Jan 05 2022 xu_ping <xuping33@huawei.com> - 1:1.2.10-56
+- fix config.guess and config.sub path error
+
 * Wed Nov 27 2019 Ling Yang <lingyang2@huawei.com> - 1:1.2.10-54
 - Package init
